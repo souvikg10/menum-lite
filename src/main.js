@@ -3,13 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import iView from 'iview'
-import 'iview/dist/styles/iview.css'
 import firebase from 'firebase'
 import {config} from './firebaseConfig'
-Vue.use(iView)
+import ElementUI from 'element-ui'
 Vue.config.productionTip = false
-
+Vue.use(ElementUI)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

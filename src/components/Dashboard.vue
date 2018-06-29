@@ -1,20 +1,16 @@
 <template>
   <div>
-    <h1>Signup succeeded</h1>
-    <button @click='logOut'>Log out</button>
-    <hr>
-    <img :src="photo" style="height: 120px"> <br>
-    <p>{{name}}</p>
-    <p>{{email}}</p>
-    <p>{{userId}}</p>
-    <hr>
-    <pre>{{user}}</pre>
+    <Menu> </Menu>
   </div>
 </template>
 
 <script>
 import firebase from 'firebase'
+import Menu from './Menu'
 export default {
+  components: {
+    'Menu': Menu
+  },
   data () {
     return {
       photo: '',
