@@ -2,7 +2,6 @@
   <div>
    <el-header>
       <Menu> </Menu>
-      <Crumb> </Crumb>
     </el-header>
     <el-container></el-container>
     <el-aside>
