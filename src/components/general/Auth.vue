@@ -5,16 +5,18 @@
 import firebase from 'firebase'
 import firebaseui from 'firebaseui'
 export default {
-  name: 'auth',
+  name: 'welcome',
   mounted () {
     var uiConfig = {
-      signInSuccessUrl: '/success',
+      signInSuccessUrl: '/dashboard',
       signInOptions: [
         firebase.auth.EmailAuthProvider.PROVIDER_ID
-      ]
+      ],
+      credentialHelper: firebaseui.auth.CredentialHelper.NONE
     }
     var ui = new firebaseui.auth.AuthUI(firebase.auth())
     ui.start('#firebaseui-auth-container', uiConfig)
+    // ui.disableAutoSignIn()
   }
 }
 </script>

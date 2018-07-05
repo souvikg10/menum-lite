@@ -14,10 +14,10 @@ export default {
   methods: {
     logOut () {
       firebase.auth().signOut()
-      this.$router.push('/')
+      this.$router.push({name: 'Welcome'})
     },
     home () {
-      this.$router.push('/dashboard')
+      this.$router.push({name: 'Dashboard'})
     }
   }
 }

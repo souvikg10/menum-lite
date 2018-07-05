@@ -14,12 +14,10 @@
 <script>
 import Menu from '@/components/general/Menu'
 import SideMenu from './SideMenu'
-import Crumb from '@/components/general/Crumb'
 export default {
   components: {
     'Menu': Menu,
-    'SideMenu': SideMenu,
-    'Crumb': Crumb
+    'SideMenu': SideMenu
   }
 }
 </script>

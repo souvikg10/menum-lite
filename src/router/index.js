@@ -9,8 +9,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path: '/', component: Auth, name: 'Start' },
-    { path: '/success', component: Dashboard, name: 'Home' },
+    { path: '/', component: Auth, name: 'Welcome' },
     { path: '/dashboard', component: Dashboard, name: 'Dashboard' },
     { path: '/importData', component: ImportData, name: 'Import' },
     { path: '/createProduct', component: CreateProduct, name: 'Create Product' }

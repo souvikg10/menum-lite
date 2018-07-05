@@ -42,11 +42,9 @@
 </template>
 <script>
 import Menu from '@/components/general/Menu'
-import Crumb from '@/components/general/Crumb'
 export default {
   components: {
-    'Menu': Menu,
-    'Crumb': Crumb
+    'Menu': Menu
   },
   data () {
     return {

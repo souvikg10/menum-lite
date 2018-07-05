@@ -16,9 +16,13 @@ new Vue({
     firebase.initializeApp(config)
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        this.$router.push('/success')
+        this.$router.push({name: 'Dashboard'})
       } else {
-        this.$router.push('/auth')
+        this.$router.push({name: 'Welcome'})
+        this.$notify({
+          title: 'Please sign-in to continue',
+          type: 'info'
+        })
       }
     })
   },
