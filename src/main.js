@@ -6,6 +6,10 @@ import router from './router'
 import firebase from 'firebase'
 import {config} from './firebaseConfig'
 import ElementUI from 'element-ui'
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
+Vue.use(VueMaterial)
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 /* eslint-disable no-new */
@@ -14,17 +18,6 @@ new Vue({
   router,
   created () {
     firebase.initializeApp(config)
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        this.$router.push({name: 'Dashboard'})
-      } else {
-        this.$router.push({name: 'Welcome'})
-        this.$notify({
-          title: 'Please sign-in to continue',
-          type: 'info'
-        })
-      }
-    })
   },
   components: { App },
   template: '<App/>'

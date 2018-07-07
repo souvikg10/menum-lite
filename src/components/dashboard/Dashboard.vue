@@ -1,22 +1,20 @@
 <template>
-  <div>
-   <el-header>
-      <Menu> </Menu>
-    </el-header>
-    <el-container></el-container>
-    <el-aside>
-      <SideMenu></SideMenu>
-    </el-aside>
-  </div>
+<div>
+<Menu></Menu>
+<SideMenu></SideMenu>
+</div>
 </template>
 
 <script>
 import Menu from '@/components/general/Menu'
-import SideMenu from './SideMenu'
+import SideMenu from '@/components/dashboard/SideMenu'
 export default {
+  name: 'Dashboard',
   components: {
-    'Menu': Menu,
-    'SideMenu': SideMenu
-  }
+    Menu: Menu,
+    SideMenu: SideMenu
+  },
+  data: () => ({
+  })
 }
 </script>

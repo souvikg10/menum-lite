@@ -17,6 +17,23 @@ export default {
     var ui = new firebaseui.auth.AuthUI(firebase.auth())
     ui.start('#firebaseui-auth-container', uiConfig)
     // ui.disableAutoSignIn()
+  },
+  created () {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.$router.push({name: 'Dashboard'})
+        this.$notify({
+          title: 'Welcome,' + user.displayName,
+          type: 'success'
+        })
+      } else {
+        this.$router.push({name: 'Welcome'})
+        this.$notify({
+          title: 'Please sign-in to continue',
+          type: 'info'
+        })
+      }
+    })
   }
 }
 </script>
