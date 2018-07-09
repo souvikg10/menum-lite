@@ -13,8 +13,8 @@
           Use this module to manage your daily menus, create new ones and print them
         </md-card-content>
         <md-card-actions md-alignment="space-between">
-          <md-button>Dashboard</md-button>
-          <md-button>Create Menu</md-button>
+          <md-button @click="menuDashboard">Dashboard</md-button>
+          <md-button @click="createMenu">Create Menu</md-button>
         </md-card-actions>
       </md-ripple>
       </md-card >
@@ -30,7 +30,7 @@
           Create/Manage Menu Items and print them as recipes for your staff
         </md-card-content>
         <md-card-actions md-alignment="space-between">
-          <md-button>Dashboard</md-button>
+          <md-button @click="menuItemDashboard">Dashboard</md-button>
           <md-button @click="createMenuItems">Create Menu Items</md-button>
         </md-card-actions>
       </md-ripple>
@@ -49,7 +49,7 @@
             Manage your favorite batch recipes and analyse the cost per recipe
           </md-card-content>
           <md-card-actions md-alignment="space-between">
-            <md-button>Dashboard</md-button>
+            <md-button @click="batchDashboard">Dashboard</md-button>
             <md-button @click="createBatch">Create Batch Items</md-button>
           </md-card-actions>
         </md-ripple>
@@ -66,7 +66,7 @@
             Manage/View your products received from your distributors. Create Test products as well
           </md-card-content>
           <md-card-actions md-alignment="space-between">
-            <md-button>Dashboard</md-button>
+            <md-button @click="productDashboard">Dashboard</md-button>
             <md-button @click="createProduct">Create Products</md-button>
           </md-card-actions>
         </md-ripple>
@@ -106,8 +106,23 @@ export default {
     createBatch () {
       this.$router.push({name: 'Create Batch'})
     },
+    batchDashboard () {
+      this.$router.push({name: 'Batch Dashboard'})
+    },
     createMenuItems () {
       this.$router.push({name: 'Create Menu Items'})
+    },
+    menuItemDashboard () {
+      this.$router.push({name: 'Menu Items Dashboard'})
+    },
+    menuDashboard () {
+      this.$router.push({name: 'Menu Dashboard'})
+    },
+    createMenu () {
+      this.$router.push({name: 'Create Menu'})
+    },
+    productDashboard () {
+      this.$router.push({name: 'Product Dashboard'})
     }
   }
 
